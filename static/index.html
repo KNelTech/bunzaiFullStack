@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-header">
+        <h2>Rate This Cat!</h2>
+      </div>
+
+      <div class="image-container">
+        <img
+          id="catImage"
+          src="https://www.savelives.com/media/catalog/product/cache/71b2fad5c9a561f79448e3b0c704c49b/w/0/w07144u.jpg"
+          alt="Cat Image"
+        />
+      </div>
+
+      <button type="button" id="nextCat" onclick="fetchNewCat()">
+        Next Cat
+      </button>
+
+      <form id="ratingForm">
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="rating">Rating (1-10):</label>
+          <input
+            type="number"
+            id="rating"
+            name="rating"
+            min="1"
+            max="10"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="comment">Comment:</label>
+          <textarea id="comment" name="comment" required></textarea>
+        </div>
+
+        <button type="submit">Submit Rating</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
